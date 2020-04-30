@@ -108,7 +108,15 @@ function noOfChocolates(chocolates)
 
 function sortChocolateBasedOnCount(chocolates)
 {
-
+    let cho = chocolates.reduce(function (b, a) {
+        if (a in b) {
+            b[a]++;
+        } 
+        else {
+            b[a] = 1;
+        }
+        return b;
+    }, {});
 }
 //Progression 7: Change ___ chocolates of ____ color to ____ color
 
